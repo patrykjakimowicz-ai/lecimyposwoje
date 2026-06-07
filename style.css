@@ -318,7 +318,7 @@ section { padding-block: 3rem; }
   height: 85vh;
   min-height: 620px;
   object-fit: cover;
-  object-position: center 60%;
+  object-position: center 15%;
 }
 
 .hero__gradient {
@@ -347,7 +347,7 @@ section { padding-block: 3rem; }
   align-items: center;
   text-align: center;
   gap: var(--sp-md);
-  padding: var(--sp-3xl) var(--sp-md) var(--sp-lg);
+  padding: var(--sp-2xl) var(--sp-md) var(--sp-lg);
 }
 
 .hero__headline {
