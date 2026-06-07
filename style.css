@@ -15,7 +15,7 @@
   --clr-gold:        #e8780c;
   --clr-gold-light:  #f09030;
   --clr-text:        #ffffff;
-  --clr-text-muted:  #cccccc;
+  --clr-text-muted:  #d4d4d4;
   --clr-white:       #ffffff;
 
   /* Typografia */
@@ -23,9 +23,9 @@
   --font-body:       'SF Pro Text', -apple-system, system-ui, sans-serif;
 
   --fs-xs:   0.75rem;    /* 12px */
-  --fs-sm:   0.875rem;   /* 14px */
-  --fs-base: 1rem;       /* 16px */
-  --fs-md:   1.125rem;   /* 18px */
+  --fs-sm:   1.125rem;   /* 18px */
+  --fs-base: 1.1875rem;  /* 19px */
+  --fs-md:   1.375rem;   /* 22px */
   --fs-lg:   1.25rem;    /* 20px */
   --fs-xl:   1.5rem;     /* 24px */
   --fs-2xl:  2rem;       /* 32px */
@@ -34,13 +34,13 @@
   --fs-5xl:  5rem;       /* 80px */
 
   /* Spacing */
-  --sp-xs:  0.5rem;
-  --sp-sm:  1rem;
-  --sp-md:  1.5rem;
-  --sp-lg:  2.5rem;
-  --sp-xl:  4rem;
-  --sp-2xl: 6rem;
-  --sp-3xl: 8rem;
+  --sp-xs:  0.375rem;
+  --sp-sm:  0.75rem;
+  --sp-md:  1rem;
+  --sp-lg:  1.5rem;
+  --sp-xl:  2.25rem;
+  --sp-2xl: 3.25rem;
+  --sp-3xl: 4.5rem;
 
   /* Radii */
   --radius-sm: 4px;
@@ -78,7 +78,7 @@ body {
   color: var(--clr-text);
   font-family: var(--font-body);
   font-size: var(--fs-base);
-  line-height: 1.6;
+  line-height: 1.7;
   overflow-x: hidden;
   max-width: 100%;
   position: relative;
@@ -129,7 +129,7 @@ h1 { font-size: clamp(var(--fs-3xl), 6vw, var(--fs-5xl)); }
 h2 { font-size: clamp(var(--fs-2xl), 4vw, var(--fs-4xl)); }
 h3 { font-size: clamp(var(--fs-lg), 2vw, var(--fs-xl)); }
 
-p { color: var(--clr-text-muted); line-height: 1.75; }
+p { color: var(--clr-text-muted); line-height: 1.85; }
 strong, h1, h2, h3, h4, label { color: var(--clr-white); }
 
 .eyebrow {
@@ -160,7 +160,7 @@ strong, h1, h2, h3, h4, label { color: var(--clr-white); }
   width: min(100% - 3rem, var(--container-narrow));
 }
 
-section { padding-block: 3rem; }
+section { padding-block: 2rem; }
 
 /* ── BUTTONS ──────────────────────────────────── */
 .btn {
@@ -170,7 +170,7 @@ section { padding-block: 3rem; }
   padding: 0.875em 2em;
   border-radius: var(--radius-full);
   font-weight: 600;
-  font-size: var(--fs-sm);
+  font-size: 0.875rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   transition: transform var(--dur-fast) var(--ease-out),
@@ -210,7 +210,7 @@ section { padding-block: 3rem; }
 }
 .btn--ghost:hover { background: #e8780c; color: #fff; border-color: #e8780c; }
 
-.btn--lg { padding: 1em 2.5em; font-size: var(--fs-base); }
+.btn--lg { padding: 1em 2.5em; font-size: 1rem; }
 .btn--full { width: 100%; justify-content: center; }
 
 /* ── ANIMATION — REVEAL SYSTEM ────────────────── */
@@ -379,7 +379,7 @@ section { padding-block: 3rem; }
   padding: 1em 2.5em;
   border-radius: var(--radius-full);
   font-weight: 700;
-  font-size: var(--fs-base);
+  font-size: 1rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
@@ -1686,11 +1686,11 @@ blockquote::before { content: open-quote; color: var(--clr-gold); }
   border: 1px solid rgba(255,255,255,0.07);
   border-top-color: rgba(232,120,12,0.2);
   border-radius: 14px;
-  padding: var(--sp-lg) var(--sp-lg) var(--sp-md);
+  padding: var(--sp-md) var(--sp-md) var(--sp-sm);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.4rem;
   overflow: hidden;
 }
 
@@ -1800,7 +1800,7 @@ blockquote::before { content: open-quote; color: var(--clr-gold); }
   display: block;
   width: 100%;
   padding: 1em 1.5em;
-  font-size: var(--fs-md);
+  font-size: 1.125rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
@@ -1827,10 +1827,10 @@ blockquote::before { content: open-quote; color: var(--clr-gold); }
 
 /* Body — features section */
 .pricing-card__body {
-  padding: var(--sp-md) var(--sp-md) var(--sp-sm);
+  padding: var(--sp-sm) var(--sp-sm) var(--sp-xs);
   display: flex;
   flex-direction: column;
-  gap: var(--sp-md);
+  gap: var(--sp-sm);
 }
 
 /* Separator with label */
@@ -2043,18 +2043,18 @@ blockquote::before { content: open-quote; color: var(--clr-gold); }
 }
 
 @media (max-width: 768px) {
-  section { padding-block: 2rem; }
+  section { padding-block: 1.25rem; }
 
   .allaccess,
   .showcase,
   .journey,
   .for-who,
   .testimonials,
-  .features { padding-block: 2.5rem; }
+  .features { padding-block: 1.75rem; }
 
-  .features .container { gap: 2rem; }
+  .features .container { gap: 1.5rem; }
 
-  .footer { padding-block: 1.5rem 1rem; }
+  .footer { padding-block: 1.25rem 0.75rem; }
 }
 
 @media (max-width: 480px) {
