@@ -229,6 +229,13 @@ section { padding-block: 2rem; }
   opacity: 1;
   transform: translateY(0);
 }
+
+.btn[data-reveal].is-visible {
+  transition: transform var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast) var(--ease-out),
+              background var(--dur-fast),
+              border-color var(--dur-fast);
+}
 /* Delay'e przez inline style lub data-delay (ustawiane przez JS) */
 
 /* ── NAV ──────────────────────────────────────── */
@@ -640,17 +647,18 @@ section { padding-block: 2rem; }
   box-shadow: 0 0 30px rgba(232,120,12,0.6), 0 0 70px rgba(232,120,12,0.25);
 }
 
+
 /* ── SHOWCASE ─────────────────────────────────── */
 .showcase {
   border-top: 1px solid var(--clr-border);
-  padding-block: var(--sp-2xl);
+  padding-block: var(--sp-lg) var(--sp-sm);
   overflow: hidden;
 }
 
 .showcase__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--sp-2xl);
+  gap: var(--sp-lg);
   align-items: center;
 }
 
@@ -734,7 +742,7 @@ section { padding-block: 2rem; }
 /* Floating cards visual */
 .showcase__visual {
   position: relative;
-  min-height: 480px;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -772,6 +780,7 @@ section { padding-block: 2rem; }
     0 20px 60px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: visible;
+  transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out);
 }
 
 .float-card--chat::before {
@@ -800,11 +809,11 @@ section { padding-block: 2rem; }
 }
 
 .float-card--chat:hover {
-  transform: translateY(-6px) scale(1.02);
+  transform: translateY(-6px);
   box-shadow:
-    0 0 50px rgba(232, 120, 12, 0.3),
-    0 0 120px rgba(232, 120, 12, 0.15),
-    0 24px 70px rgba(0, 0, 0, 0.5);
+    0 0 50px rgba(232, 120, 12, 0.22),
+    0 0 100px rgba(232, 120, 12, 0.1),
+    0 28px 60px rgba(0, 0, 0, 0.55);
 }
 
 .chat-msg__channel {
@@ -910,7 +919,7 @@ section { padding-block: 2rem; }
   }
   .showcase__visual {
     min-height: auto;
-    padding: var(--sp-md) 0;
+    padding: 0;
   }
   .float-card--chat {
     padding: var(--sp-md) var(--sp-md);
@@ -981,15 +990,21 @@ section { padding-block: 2rem; }
 
 /* ── JOURNEY TIMELINE ─────────────────────────── */
 .journey {
-  padding-block: var(--sp-2xl);
+  padding-block: var(--sp-xl) var(--sp-lg);
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .journey {
+    padding-block: 0 var(--sp-md);
+  }
 }
 
 .journey__timeline {
   position: relative;
   max-width: 900px;
   margin-inline: auto;
-  padding: var(--sp-xl) 0;
+  padding: var(--sp-sm) 0;
 }
 
 .journey__track {
