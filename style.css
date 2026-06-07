@@ -22,12 +22,12 @@
   --font-display:    'SF Pro Text', -apple-system, system-ui, sans-serif;
   --font-body:       'SF Pro Text', -apple-system, system-ui, sans-serif;
 
-  --fs-xs:   0.75rem;    /* 12px */
-  --fs-sm:   1rem;       /* 16px */
-  --fs-base: 1.0625rem;  /* 17px */
-  --fs-md:   1.1875rem;  /* 19px */
-  --fs-lg:   1.25rem;    /* 20px */
-  --fs-xl:   1.375rem;   /* 22px */
+  --fs-xs:   0.75rem;      /* 12px */
+  --fs-sm:   1rem;         /* 16px */
+  --fs-base: 1.0625rem;    /* 17px */
+  --fs-md:   1.15625rem;   /* 18.5px */
+  --fs-lg:   1.3125rem;    /* 21px */
+  --fs-xl:   1.5rem;       /* 24px */
   --fs-2xl:  1.875rem;   /* 30px */
   --fs-3xl:  2.5rem;     /* 40px */
   --fs-4xl:  3.375rem;   /* 54px */
