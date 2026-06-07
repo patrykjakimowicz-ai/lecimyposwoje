@@ -394,10 +394,10 @@ section { padding-block: 3rem; }
 }
 
 /* ── HERO SMALL PHONE — twarz wyżej w kadrze ──────── */
-@media (max-width: 390px) {
+@media (max-width: 430px) {
   .hero__photo {
-    min-height: 660px;
-    object-position: center 25%;
+    min-height: 680px;
+    object-position: center top;
   }
   .hero__overlay-content {
     padding-top: var(--sp-xl);
