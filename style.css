@@ -80,7 +80,9 @@ body {
   font-size: var(--fs-base);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
   position: relative;
+  touch-action: pan-y;
 }
 
 /* ── Cursor follower — desktop only ───────────── */
@@ -314,6 +316,7 @@ section { padding-block: 3rem; }
   display: block;
   width: 100%;
   height: 85vh;
+  min-height: 620px;
   object-fit: cover;
   object-position: center 60%;
 }
@@ -388,6 +391,17 @@ section { padding-block: 3rem; }
   background: #e8780c;
   color: #fff;
   box-shadow: 0 0 25px rgba(232,120,12,0.5), 0 0 60px rgba(232,120,12,0.2);
+}
+
+/* ── HERO SMALL PHONE — twarz wyżej w kadrze ──────── */
+@media (max-width: 390px) {
+  .hero__photo {
+    min-height: 660px;
+    object-position: center 25%;
+  }
+  .hero__overlay-content {
+    padding-top: var(--sp-xl);
+  }
 }
 
 /* ── HERO DESKTOP — tekst po lewej, zdjęcie po prawej ── */
@@ -894,6 +908,15 @@ section { padding-block: 3rem; }
     min-height: auto;
     padding: var(--sp-md) 0;
   }
+  .float-card--chat {
+    padding: var(--sp-md) var(--sp-md);
+  }
+  .chat-msg__text {
+    font-size: var(--fs-base);
+  }
+  .chat-msg__time {
+    white-space: nowrap;
+  }
 }
 
 /* ── VIDEO ────────────────────────────────────── */
@@ -955,6 +978,7 @@ section { padding-block: 3rem; }
 /* ── JOURNEY TIMELINE ─────────────────────────── */
 .journey {
   padding-block: var(--sp-2xl);
+  overflow: hidden;
 }
 
 .journey__timeline {
@@ -1136,6 +1160,7 @@ section { padding-block: 3rem; }
 .for-who {
   padding-block: var(--sp-2xl);
   border-top: 1px solid var(--clr-border);
+  overflow: hidden;
 }
 
 .for-who__map {
@@ -1428,7 +1453,7 @@ section { padding-block: 3rem; }
 }
 
 /* ── FEATURES ─────────────────────────────────── */
-.features { }
+.features { overflow: hidden; }
 .features .container { display: flex; flex-direction: column; gap: var(--sp-3xl); }
 
 .feature {
@@ -1475,7 +1500,7 @@ section { padding-block: 3rem; }
 .feature__media img { width: 100%; aspect-ratio: 6/5; object-fit: cover; }
 
 /* ── TESTIMONIALS ─────────────────────────────── */
-.testimonials { }
+.testimonials { overflow: hidden; }
 
 .testimonials__slider { position: relative; }
 
@@ -1983,7 +2008,7 @@ blockquote::before { content: open-quote; color: var(--clr-gold); }
   .nav__cta { margin-inline-start: auto; }
   .feature { grid-template-columns: 1fr; direction: ltr; }
   .feature__media { order: -1; }
-  .testimonial-card { padding: var(--sp-lg); }
+  .testimonial-card { padding: var(--sp-md) var(--sp-lg); }
   .allaccess__grid { grid-template-columns: 1fr; }
 }
 
@@ -2034,6 +2059,14 @@ blockquote::before { content: open-quote; color: var(--clr-gold); }
 
 @media (max-width: 480px) {
   .stats__list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 390px) {
+  .testimonial-card { padding: var(--sp-md) var(--sp-md); }
+  blockquote { font-size: var(--fs-base); }
+  .faq-item__question { padding: var(--sp-sm) var(--sp-md); font-size: var(--fs-base); }
+  .allaccess__card { padding: var(--sp-md); }
+  .float-card--chat { padding: var(--sp-sm) var(--sp-md); }
 }
 
 /* ── REDUCED MOTION ───────────────────────────── */
