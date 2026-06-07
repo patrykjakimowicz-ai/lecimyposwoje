@@ -67,7 +67,7 @@
 
 /* ── RESET ────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; -webkit-overflow-scrolling: touch; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; -webkit-overflow-scrolling: touch; overflow-x: hidden; }
 body {
   background: var(--clr-bg);
   background:
@@ -628,6 +628,7 @@ section { padding-block: 3rem; }
 .showcase {
   border-top: 1px solid var(--clr-border);
   padding-block: var(--sp-2xl);
+  overflow: hidden;
 }
 
 .showcase__grid {
