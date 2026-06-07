@@ -78,7 +78,7 @@ body {
   color: var(--clr-text);
   font-family: var(--font-body);
   font-size: var(--fs-base);
-  line-height: 1.55;
+  line-height: 1.35;
   overflow-x: hidden;
   max-width: 100%;
   position: relative;
@@ -129,7 +129,7 @@ h1 { font-size: clamp(var(--fs-3xl), 6vw, var(--fs-5xl)); }
 h2 { font-size: clamp(var(--fs-2xl), 4vw, var(--fs-4xl)); }
 h3 { font-size: clamp(var(--fs-lg), 2vw, var(--fs-xl)); }
 
-p { color: var(--clr-text-muted); line-height: 1.5; }
+p { color: var(--clr-text-muted); line-height: 1.4; }
 strong, h1, h2, h3, h4, label { color: var(--clr-white); }
 
 .eyebrow {
@@ -367,7 +367,7 @@ section { padding-block: 2rem; }
 .hero__sub {
   font-size: var(--fs-sm);
   color: #ffffff;
-  line-height: 1.45;
+  line-height: 1.35;
   max-width: 480px;
   text-shadow: 0 1px 8px rgba(0,0,0,0.9), 0 3px 24px rgba(0,0,0,0.7);
 }
@@ -426,7 +426,7 @@ section { padding-block: 2rem; }
   .hero__text {
     display: flex;
     flex-direction: column;
-    gap: var(--sp-md);
+    gap: var(--sp-xl);
   }
   .hero__text .hero__headline {
     text-shadow: none;
@@ -560,7 +560,7 @@ section { padding-block: 2rem; }
 .allaccess__sub {
   font-size: var(--fs-md);
   color: var(--clr-text-muted);
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 .allaccess__grid {
@@ -630,7 +630,7 @@ section { padding-block: 2rem; }
 .allaccess__card p {
   font-size: var(--fs-sm);
   color: var(--clr-text-muted);
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 .allaccess__cta {
@@ -676,7 +676,7 @@ section { padding-block: 2rem; }
 .showcase__desc {
   font-size: var(--fs-md);
   color: var(--clr-text-muted);
-  line-height: 1.45;
+  line-height: 1.35;
   text-align: center;
 }
 
@@ -881,7 +881,7 @@ section { padding-block: 2rem; }
 .chat-msg__text {
   font-size: var(--fs-lg);
   color: #f2f3f5;
-  line-height: 1.45;
+  line-height: 1.35;
   font-style: italic;
 }
 
@@ -1125,7 +1125,7 @@ section { padding-block: 2rem; }
 .journey__card p {
   font-size: var(--fs-sm);
   color: var(--clr-text-muted);
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 .journey__finale {
@@ -1178,7 +1178,7 @@ section { padding-block: 2rem; }
   font-size: var(--fs-md);
   color: var(--clr-text-muted);
   max-width: 480px;
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 /* ── FOR WHO — hub layout ─────────────────────── */
@@ -1263,7 +1263,7 @@ section { padding-block: 2rem; }
 .for-who__card p {
   font-size: var(--fs-sm);
   color: var(--clr-text-muted);
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 /* Hub center */
@@ -1450,7 +1450,7 @@ section { padding-block: 2rem; }
 .for-who__not-item p {
   font-size: var(--fs-sm);
   color: var(--clr-text-muted);
-  line-height: 1.45;
+  line-height: 1.35;
 }
 
 @media (max-width: 768px) {
