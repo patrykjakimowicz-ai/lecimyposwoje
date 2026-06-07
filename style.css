@@ -528,6 +528,8 @@ section { padding-block: 2rem; }
   overflow: hidden;
   padding-block: var(--sp-2xl);
   background: var(--clr-bg);
+  border-top: 1px solid var(--clr-border);
+  margin-top: var(--sp-2xl);
 }
 
 .allaccess__glow {
