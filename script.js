@@ -33,7 +33,7 @@ function initReveal() {
   let lastParent = null;
   staggerGroups.forEach((el) => {
     if (el.parentElement !== lastParent) { staggerIndex = 0; lastParent = el.parentElement; }
-    el.style.transitionDelay = `${staggerIndex * 140}ms`;
+    el.style.transitionDelay = `${staggerIndex * 60}ms`;
     staggerIndex++;
   });
 
@@ -49,7 +49,7 @@ function initReveal() {
         observer.unobserve(entry.target); // jednorazowe
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.05, rootMargin: '0px 0px 60px 0px' });
 
   document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
 }
@@ -384,7 +384,7 @@ function initJourney() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px 40px 0px' });
 
   steps.forEach((step) => observer.observe(step));
 }
