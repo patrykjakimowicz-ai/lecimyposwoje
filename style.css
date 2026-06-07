@@ -670,12 +670,18 @@ section { padding-block: 2rem; }
 
 .showcase__info h2 {
   color: var(--clr-white);
+  text-align: center;
 }
 
 .showcase__desc {
   font-size: var(--fs-md);
   color: var(--clr-text-muted);
   line-height: 1.45;
+  text-align: center;
+}
+
+.showcase__info .eyebrow {
+  text-align: center;
 }
 
 .showcase__list {
